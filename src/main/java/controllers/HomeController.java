@@ -17,22 +17,6 @@ public class HomeController {
     @FXML
     private Button button2;
 
-    @FXML
-    void handleButton1Action() throws Exception {
-        // încarcă fișierul FXML pentru fereastra 1
-        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
 
-    @FXML
-    void handleButton2Action() throws Exception {
-        // încarcă fișierul FXML pentru fereastra 2
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
 }
 
