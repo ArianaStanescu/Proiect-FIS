@@ -17,22 +17,23 @@ import java.io.IOException;
 public class HomeController {
     private Stage login_stage;
     private Scene login_scene;
-    ;
     private Parent root;
 
-    public void loginManager(ActionEvent login_event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("login-manager.fxml"));
-        login_stage = (Stage)((Node)login_event.getSource()).getScene().getWindow();
+    public void adminLogin(ActionEvent admin_login_event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("admin-login.fxml"));
+        login_stage = (Stage)((Node)admin_login_event.getSource()).getScene().getWindow();
         login_scene = new Scene(root);
         login_stage.setScene(login_scene);
         login_stage.show();
+        LoginController.actor = 1;
     }
-    public void loginUser(ActionEvent login_event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("login-user.fxml"));
-        login_stage = (Stage)((Node)login_event.getSource()).getScene().getWindow();
+    public void userLogin(ActionEvent user_login_event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("user-login.fxml"));
+        login_stage = (Stage)((Node)user_login_event.getSource()).getScene().getWindow();
         login_scene = new Scene(root);
         login_stage.setScene(login_scene);
         login_stage.show();
+        LoginController.actor = 0;
     }
 
 

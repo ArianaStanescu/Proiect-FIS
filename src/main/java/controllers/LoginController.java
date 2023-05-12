@@ -12,17 +12,35 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginController {
-    private Stage home_stage;
-    private Scene home_scene;
-;
+    public static int actor;
+    private Stage stage;
+    private Scene scene;
     private Parent root;
 
-    public void back(ActionEvent event) throws IOException {
+    public void login(ActionEvent login_event) throws IOException {
+        if(actor == 1) {
+            root = FXMLLoader.load(AdminFunctions.class.getResource("admin-functions.fxml"));
+            stage = (Stage)((Node)login_event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else {
+            root = FXMLLoader.load(UserFunctions.class.getResource("user-functions.fxml"));
+            stage = (Stage)((Node)login_event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+    }
+
+    public void back(ActionEvent back_event) throws IOException {
         root = FXMLLoader.load(HomeApplication.class.getResource("home.fxml"));
-        home_stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        home_scene = new Scene(root);
-        home_stage.setScene(home_scene);
-        home_stage.show();
+        stage = (Stage)((Node)back_event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
