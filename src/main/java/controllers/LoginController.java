@@ -19,14 +19,14 @@ public class LoginController {
 
     public void login(ActionEvent login_event) throws IOException {
         if(actor == 1) {
-            root = FXMLLoader.load(AdminFunctions.class.getResource("functions-admin.fxml"));
+            root = FXMLLoader.load(AdminFunctions.class.getResource("admin-functions.fxml"));
             stage = (Stage)((Node)login_event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         }
         else {
-            root = FXMLLoader.load(UserFunctions.class.getResource("functions-user.fxml"));
+            root = FXMLLoader.load(UserFunctions.class.getResource("user-functions.fxml"));
             stage = (Stage)((Node)login_event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

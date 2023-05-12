@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
     <children>
-        <Button layoutX="480.0" layoutY="257.0" mnemonicParsing="false" onAction="#loginUser" text="Client">
+        <Button layoutX="480.0" layoutY="257.0" mnemonicParsing="false" onAction="#userLogin" text="Client">
             <font>
                 <Font size="16.0" />
             </font>
@@ -29,7 +29,7 @@
                 <Image url="@../../../images/home_image.png" />
             </image>
         </ImageView>
-        <Button layoutX="359.0" layoutY="257.0" mnemonicParsing="false" onAction="#loginManager" text="Admin">
+        <Button layoutX="359.0" layoutY="257.0" mnemonicParsing="false" onAction="#adminLogin" text="Admin">
             <font>
                 <Font size="16.0" />
             </font>
