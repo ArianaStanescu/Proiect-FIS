@@ -3,6 +3,7 @@ package controllers;
 
 import com.example.library.HomeApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -17,6 +18,7 @@ public class LoginController {
     private Scene scene;
     private Parent root;
 
+    @FXML
     public void login(ActionEvent login_event) throws IOException {
         if(actor == 1) {
             root = FXMLLoader.load(AdminFunctions.class.getResource("admin-functions.fxml"));
@@ -34,7 +36,7 @@ public class LoginController {
         }
 
     }
-
+    @FXML
     public void back(ActionEvent back_event) throws IOException {
         root = FXMLLoader.load(HomeApplication.class.getResource("home.fxml"));
         stage = (Stage)((Node)back_event.getSource()).getScene().getWindow();

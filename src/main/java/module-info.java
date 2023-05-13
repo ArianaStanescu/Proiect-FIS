@@ -7,4 +7,6 @@ module com.example.library {
     exports com.example.library;
     exports controllers;
     opens controllers to javafx.fxml;
+    exports controllers.adminfunctions;
+    opens controllers.adminfunctions to javafx.fxml;
 }

@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminFunctions">
    <children>
       <AnchorPane layoutY="2.0" prefHeight="400.0" prefWidth="600.0">
@@ -42,7 +41,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="190.0" layoutY="175.0" mnemonicParsing="false" text="View Users" textAlignment="CENTER">
+            <Button layoutX="190.0" layoutY="175.0" mnemonicParsing="false" onAction="#viewUsers" text="View Users" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
