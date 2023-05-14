@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.adminfunctions.AddUserController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/home_image.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="234.0" layoutY="59.0" text="Add User">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Pane layoutX="200.0" layoutY="126.0" prefHeight="260.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="25.0" layoutY="29.0" text="Username:" />
+            <TextField layoutX="25.0" layoutY="46.0" />
+            <Label layoutX="23.0" layoutY="101.0" text="Password:" />
+            <TextField layoutX="25.0" layoutY="118.0" />
+            <Button layoutX="42.0" layoutY="175.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="115.0" text="Create" />
+            <Button layoutX="80.0" layoutY="221.0" mnemonicParsing="false" onAction="#back" text="Back" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
