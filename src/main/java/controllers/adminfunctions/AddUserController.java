@@ -1,34 +1,36 @@
 package controllers.adminfunctions;
 
-import exceptions.UsernameAlreadyExistsException;
+import controllers.AdminFunctions;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import services.UserService;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AddUserController {
-    @FXML
-    private Text registrationMessage;
-    @FXML
-    private PasswordField passwordField;
-    @FXML
-    private TextField usernameField;
-//    @FXML
-//    private ChoiceBox role;
-//
-//    @FXML
-//    public void initialize() {
-//        role.getItems().addAll("Client", "Admin");
-//    }
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
 
     @FXML
-    public void handleRegisterAction() {
-        try {
-            UserService.addUser(usernameField.getText(), passwordField.getText());
-            registrationMessage.setText("Account created successfully!");
-        } catch (UsernameAlreadyExistsException e) {
-            registrationMessage.setText(e.getMessage());
-        }
+    public void back(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(AdminFunctions.class.getResource("admin-functions.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void login(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(AdminFunctions.class.getResource("admin-functions.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

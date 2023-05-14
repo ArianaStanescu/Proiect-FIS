@@ -36,7 +36,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="95.0" layoutY="175.0" mnemonicParsing="false" text="Add User" textAlignment="CENTER">
+            <Button layoutX="95.0" layoutY="175.0" mnemonicParsing="false" onAction="#addUser" text="Add User" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
