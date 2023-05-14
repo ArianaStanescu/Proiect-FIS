@@ -18,7 +18,7 @@ public class HomeController {
     private Stage login_stage;
     private Scene login_scene;
     private Parent root;
-
+    @FXML
     public void adminLogin(ActionEvent admin_login_event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("admin-login.fxml"));
         login_stage = (Stage)((Node)admin_login_event.getSource()).getScene().getWindow();
@@ -27,6 +27,7 @@ public class HomeController {
         login_stage.show();
         LoginController.actor = 1;
     }
+    @FXML
     public void userLogin(ActionEvent user_login_event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("user-login.fxml"));
         login_stage = (Stage)((Node)user_login_event.getSource()).getScene().getWindow();
