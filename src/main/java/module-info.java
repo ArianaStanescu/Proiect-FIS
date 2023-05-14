@@ -1,6 +1,7 @@
 module com.example.library {
     requires javafx.controls;
     requires javafx.fxml;
+    requires nitrite;
 
 
     opens com.example.library to javafx.fxml;
