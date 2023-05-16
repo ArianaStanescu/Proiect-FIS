@@ -1,20 +1,22 @@
 package model;
 
 
-public class User {
+public class Admin {
 
+    private String admin_id;
     private String name;
     private String username;
     private String password;
 
 
-    public User(String username, String password, String name) {
+    public Admin(String username, String password, String name, String admin_id) {
         this.username = username;
         this.password = password;
         this.name = name;
+        this.admin_id = admin_id;
     }
 
-    public User() {
+    public Admin() {
     }
 
     public String getUsername() {
@@ -48,10 +50,10 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        User user = (User) o;
+        Admin admin = (Admin) o;
 
-        if (username != null ? !username.equals(user.username) : user.username != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        if (username != null ? !username.equals(admin.username) : admin.username != null) return false;
+        if (password != null ? !password.equals(admin.password) : admin.password != null) return false;
         return true;
     }
 
@@ -63,4 +65,11 @@ public class User {
     }
 
 
+    public String getAdmin_id() {
+        return admin_id;
+    }
+
+    public void setAdmin_id(String admin_id) {
+        this.admin_id = admin_id;
+    }
 }
